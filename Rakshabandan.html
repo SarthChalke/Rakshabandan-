@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Raksha Bandhan</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #fff3e6, #ffd6e0);
+        text-align: center;
+        color: #333;
+        overflow-x: hidden;
+    }
+    header {
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(5px);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    header h1 {
+        font-size: 2.5rem;
+        color: #b22222;
+        margin: 0;
+    }
+    .wish {
+        margin-top: 50px;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 25px;
+        background: rgba(255, 255, 255, 0.85);
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        animation: fadeIn 2s ease-in-out;
+    }
+    .wish p {
+        font-size: 1.3rem;
+        line-height: 1.7;
+    }
+    .rakhi-img {
+        max-width: 300px;
+        margin-top: 20px;
+        animation: float 4s ease-in-out infinite;
+    }
+    button {
+        margin-top: 30px;
+        padding: 15px 30px;
+        font-size: 1.1rem;
+        background: #b22222;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    button:hover {
+        background: #800000;
+        transform: scale(1.05);
+    }
+    footer {
+        margin-top: 50px;
+        padding: 15px;
+        background: #fff5f7;
+        font-size: 0.9rem;
+        color: #666;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
+    /* Falling flowers animation */
+    .flower {
+        position: fixed;
+        top: -50px;
+        font-size: 24px;
+        animation: fall linear forwards;
+        z-index: 999;
+    }
+    @keyframes fall {
+        to {
+            transform: translateY(110vh);
+        }
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>🌸 Happy Raksha Bandhan 🌸</h1>
+</header>
+
+<div class="wish">
+    <p>Respected Sister,</p>
+    <p>
+        On this auspicious day of Raksha Bandhan, I bow to the sacred bond that ties us together.  
+        Your grace, wisdom, and kindness have been a guiding light in my life.  
+        As your brother, I take this solemn promise to protect your honor, respect your dreams,  
+        and stand beside you through every chapter of life.
+    </p>
+    <p style="font-weight: bold; color: #b22222;">
+        May the Almighty bless you with prosperity, good health, and unending joy.  
+        With utmost respect and heartfelt wishes,<br>
+        — Your Loving Brother
+    </p>
+    <img src="https://png.pngtree.com/png-vector/20210805/ourmid/pngtree-rakhi-design-raksha-bandhan-png-image_3781415.jpg" alt="Rakhi" class="rakhi-img">
+    <br>
+    <button onclick="showSurprise()">Click for a Blessing 🎁</button>
+</div>
+
+<footer>
+    © 2025 Created with ❤️ by a Proud Brother
+</footer>
+
+<!-- Background Music -->
+<audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+// Surprise Message
+function showSurprise() {
+    alert("💝 May our sacred bond remain unbroken and our respect for each other grow deeper every year. Happy Raksha Bandhan!");
+}
+
+// Falling Flowers Effect
+function createFlower() {
+    const flower = document.createElement("div");
+    flower.classList.add("flower");
+    flower.innerHTML = "🌸";
+    flower.style.left = Math.random() * window.innerWidth + "px";
+    flower.style.animationDuration = (3 + Math.random() * 5) + "s";
+    document.body.appendChild(flower);
+
+    setTimeout(() => {
+        flower.remove();
+    }, 8000);
+}
+setInterval(createFlower, 300);
+</script>
+
+</body>
+</html>
